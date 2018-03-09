@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.offcn.dao.FruitsDao">
+
+    <insert id="saveFruits" parameterType="com.offcn.model.Fruits">
+     insert into fruits(name,min,avg,max,spec,unit,time) 
+     values(#{name},#{min},#{avg},#{max},#{spec},#{unit},#{time})
+    </insert>
+</mapper>
