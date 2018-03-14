@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.offcn.dao.MobileDao">
+    <select id="getAllMobile" resultType="com.offcn.model.Mobile">
+        SELECT * FROM mobile
+    </select>
+    <insert id="saveMobile" parameterType="com.offcn.model.Mobile">
+     insert into mobile (mobileNumber,mobileArea,mobileType,areaCode,postCode) 
+     values(#{mobileNumber},#{mobileArea},#{mobileType},#{areaCode},#{postCode})
+    </insert>
+</mapper>
